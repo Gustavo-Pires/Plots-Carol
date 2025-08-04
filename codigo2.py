@@ -74,4 +74,4 @@ for col_name in element_columns:
     plt.savefig(f'boxplot_{safe_col_name}.png', dpi=300)
     plt.close()
 
-print("\nTodos os box plots foram gerados com visual melhorado.")
+print("\nTodos os box plots foram gerados!")
