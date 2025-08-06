@@ -5,6 +5,7 @@ import numpy as np
 # Carrega o arquivo Excel
 df = pd.read_excel('dados.xlsx')
 
+
 # Define os intervalos de linhas para as áreas "Cananeia" e "Florianopolis".
 # No DataFrame (que é 0-indexado), A2 a A16 corresponde aos índices 1 a 15.
 cananeia_df = df.iloc[1:16].copy()
@@ -63,7 +64,7 @@ for col_name in element_columns:
     safe_col_name = col_name.replace(' ', '_').replace('%', 'pct').replace('(', '').replace(')', '').replace('/', '_').replace('µg', 'ug').replace('g-1', 'g_1')
     
     # Salva o gráfico como um arquivo PNG.
-    plt.savefig(f'boxplot_{safe_col_name}.png', dpi=300)
+    plt.savefig(f'boxplot_{safe_col_name}.png')
     plt.close() # Fecha a figura para liberar memória e evitar sobreposição em plots futuros.
 
 print("\nTodos os box plots foram gerados e salvos.")
